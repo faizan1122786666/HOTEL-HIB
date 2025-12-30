@@ -67,7 +67,8 @@ const AdminBookingsPage = () => {
       <div className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Booking Management</h1>
-          <p className="text-gray-600">Total Revenue: <span className="text-green-600 font-bold">${totalRevenue.toFixed(2)}</span></p>
+          {/* <p className="text-gray-600">Total Revenue: <span className="text-green-600 font-bold">${totalRevenue.toFixed(2)}</span></p> */}
+          <p className="text-gray-600">Total Revenue: <span className="text-green-600 font-bold">Rs {totalRevenue.toLocaleString('en-PK')}</span></p>
         </div>
 
         {/* Stats Cards */}
@@ -138,7 +139,8 @@ const AdminBookingsPage = () => {
                     <td className="py-4 px-4 text-gray-600">{booking.room?.name || booking.room}</td>
                     <td className="py-4 px-4 text-gray-600">{new Date(booking.checkInDate).toLocaleDateString()}</td>
                     <td className="py-4 px-4 text-gray-600">{new Date(booking.checkOutDate).toLocaleDateString()}</td>
-                    <td className="py-4 px-4 font-semibold text-gray-900">${booking.totalPrice?.toFixed(2)}</td>
+                    {/* <td className="py-4 px-4 font-semibold text-gray-900">${booking.totalPrice?.toFixed(2)}</td> */}
+                    <td className="py-4 px-4 font-semibold text-gray-900">Rs {booking.totalPrice?.toLocaleString('en-PK')}</td>
                     <td className="py-4 px-4">
                       <span
                         className={`px-2 py-1 rounded-full text-xs font-semibold ${booking.paymentStatus === "paid"

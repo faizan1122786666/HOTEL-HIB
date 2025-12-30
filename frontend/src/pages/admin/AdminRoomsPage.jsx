@@ -581,7 +581,7 @@ const AdminRoomsPage = () => {
                 </div>
 
                 <Input
-                  label="Regular Price ($)"
+                  label="Regular Price (Rs)"
                   name="price"
                   type="number"
                   step="0.01"
@@ -591,7 +591,7 @@ const AdminRoomsPage = () => {
                 />
 
                 <Input
-                  label="Discount Price ($)"
+                  label="Discount Price (Rs)"
                   name="discountPrice"
                   type="number"
                   step="0.01"
@@ -718,9 +718,12 @@ const AdminRoomsPage = () => {
                       {room.type.charAt(0).toUpperCase() + room.type.slice(1)}
                     </td>
                     <td className="py-4 px-4 text-gray-900">
-                      <span className="line-through text-gray-400">${room.price}</span>
+                      {/* <span className="line-through text-gray-400">${room.price}</span> */}
+                      {/* <br /> */}
+                      {/* <span className="font-bold">${room.discountPrice}</span> */}
+                      <span className="line-through text-gray-400">Rs {room.price}</span>
                       <br />
-                      <span className="font-bold">${room.discountPrice}</span>
+                      <span className="font-bold">Rs {room.discountPrice}</span>
                     </td>
                     <td className="py-4 px-4 text-gray-600">{room.maxOccupancy} guests</td>
                     <td className="py-4 px-4">

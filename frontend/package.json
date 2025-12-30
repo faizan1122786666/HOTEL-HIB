@@ -10,8 +10,8 @@
     "lint": "eslint src --ext .jsx"
   },
   "dependencies": {
-    "@stripe/react-stripe-js": "^5.2.0",
-    "@stripe/stripe-js": "^8.1.0",
+    "@stripe/react-stripe-js": "^5.4.1",
+    "@stripe/stripe-js": "^8.6.0",
     "axios": "^1.13.2",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",

@@ -188,14 +188,14 @@ const RoomDetailPage = () => {
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-200">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className={`text-2xl ${i < Math.round(room.rating) ? 'text-yellow-400' : 'text-slate-300'}`}>
+                    <span key={i} className={`text-2xl ${i < Math.round(room.rating) ? 'text-slate-300' : 'text-yellow-400'}`}>
                       ★
                     </span>
                   ))}
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">{room.rating} out of 5</p>
-                  <p className="text-sm text-slate-600">{room.reviews} guest reviews</p>
+                  <p className="font-semibold text-slate-900">5 out of 5</p>
+                  <p className="text-sm text-slate-600">guest reviews</p>
                 </div>
               </div>
 
@@ -240,16 +240,19 @@ const RoomDetailPage = () => {
               {/* Price Section */}
               <div className="mb-8 pb-8 border-b border-slate-200">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold text-slate-900">${room.discountPrice}</span>
+                  {/* <span className="text-4xl font-bold text-slate-900">${room.discountPrice}</span> */}
+                  <span className="text-4xl font-bold text-slate-900">Rs {room.discountPrice.toLocaleString('en-PK')}</span>
                   {room.price !== room.discountPrice && (
-                    <span className="text-lg text-slate-500 line-through">${room.price}</span>
+                    // <span className="text-lg text-slate-500 line-through">${room.price}</span>
+                    <span className="text-lg text-slate-500 line-through">Rs {room.price.toLocaleString('en-PK')}</span>
                   )}
                 </div>
                 <p className="text-sm text-slate-600">per night</p>
                 {nights > 0 && (
                   <div className="mt-4 pt-4 border-t border-slate-200">
                     <p className="text-xs text-slate-600 mb-1">Total for {nights} night{nights !== 1 ? 's' : ''}</p>
-                    <p className="text-2xl font-bold text-blue-600">${totalPrice.toFixed(2)}</p>
+                    {/* <p className="text-2xl font-bold text-blue-600">${totalPrice.toFixed(2)}</p> */}
+                    <p className="text-2xl font-bold text-blue-600">Rs {totalPrice.toLocaleString('en-PK')}</p>
                   </div>
                 )}
               </div>
@@ -326,16 +329,20 @@ const RoomDetailPage = () => {
                 {nights > 0 && (
                   <div className="p-4 bg-blue-50 rounded-xl border border-blue-200 space-y-2 text-sm">
                     <div className="flex justify-between text-slate-600">
-                      <span>${room.discountPrice} × {nights} night{nights !== 1 ? 's' : ''}</span>
-                      <span className="font-semibold text-slate-900">${totalPrice.toFixed(2)}</span>
+                      <span>Rs {room.discountPrice} × {nights} night{nights !== 1 ? 's' : ''}</span>
+                      {/* <span className="font-semibold text-slate-900">${totalPrice.toFixed(2)}</span> */}
+                      <span className="font-semibold text-slate-900">Rs {totalPrice.toLocaleString('en-PK')}</span>
                     </div>
                     <div className="flex justify-between text-slate-600">
                       <span>Taxes & fees</span>
-                      <span className="font-semibold text-slate-900">${taxAmount.toFixed(2)}</span>
+                      {/* <span className="font-semibold text-slate-900">${taxAmount.toFixed(2)}</span> */}
+                      <span className="font-semibold text-slate-900">Rs {taxAmount.toLocaleString('en-PK')}</span>
+      
                     </div>
                     <div className="border-t border-blue-200 pt-2 flex justify-between">
                       <span className="font-bold text-slate-900">Total</span>
-                      <span className="font-bold text-blue-600">${(totalPrice + taxAmount).toFixed(2)}</span>
+                      {/* <span className="font-bold text-blue-600">${(totalPrice + taxAmount).toFixed(2)}</span> */}
+                      <span className="font-bold text-blue-600">Rs {(totalPrice + taxAmount).toLocaleString('en-PK')}</span>
                     </div>
                   </div>
                 )}

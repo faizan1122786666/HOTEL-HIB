@@ -268,7 +268,7 @@ const RoomsPage = () => {
   const [selectedHotel, setSelectedHotel] = useState("")
   const [filters, setFilters] = useState({
     type: "",
-    maxPrice: 600,
+    maxPrice: 20000,
     minOccupancy: 1,
   })
 
@@ -375,7 +375,8 @@ const RoomsPage = () => {
     return rooms.map((room) => ({
       image: room.images?.[0] || "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       title: room.name,
-      subtitle: `$${room.discountPrice || room.price}/night`,
+      // subtitle: `$${room.discountPrice || room.price}/night`,
+      subtitle: `Rs ${room.discountPrice || room.price}/night`,
       handle: `${room.hotelName} • Floor ${room.floor}`,
       location: `${room.city} • ${room.maxOccupancy} guests`,
       borderColor: getBorderColor(room.type),
@@ -389,7 +390,8 @@ const RoomsPage = () => {
     return hotels.map((hotel) => ({
       image: hotel.images?.[0] || "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       title: hotel.hotelName,
-      subtitle: `From $${hotel.minPrice}/night`,
+      // subtitle: `From $${hotel.minPrice}/night`,
+      subtitle: `From Rs ${hotel.minPrice}/night`,
       handle: `${hotel.totalRooms} rooms available`,
       location: `${hotel.city} • ${hotel.availableRooms} available`,
       borderColor: '#3B82F6',
@@ -510,12 +512,12 @@ const RoomsPage = () => {
                 <div>
                   <div className="flex justify-between items-center mb-3">
                     <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wide">Max Price</label>
-                    <span className="text-lg font-bold text-blue-600">${filters.maxPrice}</span>
+                    <span className="text-lg font-bold text-blue-600">Rs {filters.maxPrice}</span>
                   </div>
                   <input
                     type="range"
-                    min="50"
-                    max="600"
+                    min="4000"
+                    max="20000"
                     value={filters.maxPrice}
                     onChange={(e) =>
                       setFilters({
@@ -526,8 +528,8 @@ const RoomsPage = () => {
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   />
                   <div className="flex justify-between text-xs text-slate-500 mt-2">
-                    <span>$50</span>
-                    <span>$600</span>
+                    <span>4000</span>
+                    <span>20000</span>
                   </div>
                 </div>
 
@@ -558,7 +560,7 @@ const RoomsPage = () => {
                   onClick={() =>
                     setFilters({
                       type: "",
-                      maxPrice: 600,
+                      maxPrice: 20000,
                       minOccupancy: 1,
                     })
                   }
@@ -620,7 +622,7 @@ const RoomsPage = () => {
                               <p>📍 {hotel.city}</p>
                               <p>🏨 {hotel.totalRooms} total rooms</p>
                               <p>✓ {hotel.availableRooms} available</p>
-                              <p className="text-blue-600 font-bold">From ${hotel.minPrice}/night</p>
+                              <p className="text-blue-600 font-bold">From Rs {hotel.minPrice}/night</p>
                             </div>
                           </div>
                         </div>
