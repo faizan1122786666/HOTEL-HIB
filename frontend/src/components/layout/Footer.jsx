@@ -105,12 +105,12 @@ const Footer = () => {
               <ul className="space-y-3 text-sm">
                 <li>
                   <a href="tel:+1234567890" className="text-slate-400 hover:text-green-400 transition font-medium">
-                    📱 Call: +1 (234) 567-890
+                    📱 Call: +92 3271616777
                   </a>
                 </li>
                 <li>
                   <a href="mailto:support@hotelhub.com" className="text-slate-400 hover:text-blue-400 transition font-medium">
-                    ✉️ support@hotelhub.com
+                    ✉️ faizan9664740@gmail.com
                   </a>
                 </li>
                 <li>
@@ -197,7 +197,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center text-xs text-slate-500 border-t border-slate-800 pt-8">
               <p>&copy; 2025 HotelHub. All rights reserved. | Designed with ❤️ for luxury travelers</p>
-              <p className="mt-2">🌍 Operating in 150+ countries | 🏨 50,000+ properties | ⭐ 4.8/5 rating</p>
+              <p className="mt-2">🌍 Operating in Pakistan | 🏨 50+ properties | ⭐ 4.8/5 rating</p>
             </div>
           </div>
         </div>

@@ -89,7 +89,7 @@ const LoginPage = () => {
           </p>
 
           {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          {/* <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
             <p className="text-sm font-semibold text-blue-900 mb-2">Demo Credentials:</p>
             <p className="text-xs text-blue-800">
               <strong>Admin:</strong> admin@hotel.com / admin123
@@ -97,7 +97,7 @@ const LoginPage = () => {
             <p className="text-xs text-blue-800">
               <strong>User:</strong> john@example.com / user123
             </p>
-          </div>
+          </div> */}
         </Card>
       </div>
 

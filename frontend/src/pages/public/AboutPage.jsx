@@ -6,25 +6,25 @@ import Card from "../../components/common/Card"
 const AboutPage = () => {
   const team = [
     {
-      name: "Rajesh Kumar",
+      name: "M Faizan Javed",
       role: "Founder & CEO",
       bio: "Passionate about hospitality with 20+ years of experience.",
       icon: "👨‍💼",
     },
     {
-      name: "Priya Sharma",
+      name: "Mohsin Mustafa",
       role: "COO & Booking Expert",
       bio: "Expert in luxury travel logistics and customer satisfaction.",
-      icon: "👩‍💼",
+      icon: "👨‍💼",
     },
     {
-      name: "Ahmed Hassan",
+      name: "Saad Ayub",
       role: "CTO & Tech Lead",
       bio: "Tech innovator driving seamless booking experiences.",
       icon: "👨‍💻",
     },
     {
-      name: "Lisa Anderson",
+      name: "Alizeh",
       role: "Head of Customer Care",
       bio: "Award-winning customer service leader.",
       icon: "👩‍🎓",

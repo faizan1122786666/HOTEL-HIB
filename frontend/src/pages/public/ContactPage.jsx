@@ -34,29 +34,29 @@ const ContactPage = () => {
     {
       icon: "📱",
       title: "Phone",
-      value: "+1 (234) 567-890",
+      value: "+92 3271616777",
       link: "tel:+1234567890",
       color: "blue",
     },
     {
       icon: "✉️",
       title: "Email",
-      value: "support@hotelhub.com",
-      link: "mailto:support@hotelhub.com",
+      value: "hotelhub@gmail.com",
+      link: "mailto:faizan9664740t@gmail.com",
       color: "blue",
     },
     {
       icon: "💬",
       title: "WhatsApp",
       value: "Chat with us anytime",
-      link: "https://wa.me/1234567890",
+      link: "https://wa.me/03271616777",
       color: "green",
     },
     {
       icon: "🆘",
-      title: "Emergency SOS",
-      value: "24/7 Hotline",
-      link: "tel:+1234567890",
+      title: "Instagram",
+      value: "Chat with us anytime",
+      link: "https://www.instagram.com/yourusername",
       color: "red",
     },
   ]
@@ -195,9 +195,9 @@ const ContactPage = () => {
               <Card className="p-8 rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-indigo-50">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">🏢 Office Address</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  145 Keyzer Street<br />
-                  Pettah, Colombo 11<br />
-                  SriLanka
+                  Street no : 6 Islam,Pura<br />
+                  Narowal, Pakistan<br />
+                  
                 </p>
               </Card>
 
@@ -207,7 +207,7 @@ const ContactPage = () => {
                   <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
                   <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
                   <p><strong>Sunday:</strong> Closed</p>
-                  <p className="text-green-600 font-semibold mt-4">🆘 24/7 Emergency Support</p>
+                  
                 </div>
               </Card>
 
