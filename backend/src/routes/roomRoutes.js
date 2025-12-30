@@ -1,3 +1,41 @@
+// import express from 'express';
+// import {
+//     getAllRooms,
+//     getRoom,
+//     createRoom,
+//     updateRoom,
+//     deleteRoom,
+//     getAvailableRooms
+// } from '../controllers/roomController.js';
+// import { protect, authorize } from '../middleware/auth.js';
+
+// const router = express.Router();
+
+// // Public routes
+// router.get('/available', getAvailableRooms);
+// router.get('/', getAllRooms);
+// router.get('/:id', getRoom);
+
+// // Protected routes (Admin only)
+// router.use(protect);
+// router.use(authorize('admin'));
+
+// router.post('/', createRoom);
+// router.put('/:id', updateRoom);
+// router.delete('/:id', deleteRoom);
+
+// export default router;
+
+
+
+
+
+
+
+
+
+
+
 import express from 'express';
 import {
     getAllRooms,
@@ -5,7 +43,10 @@ import {
     createRoom,
     updateRoom,
     deleteRoom,
-    getAvailableRooms
+    getAvailableRooms,
+    getAllCities,
+    getHotelsByCity,
+    getRoomsByHotel
 } from '../controllers/roomController.js';
 import { protect, authorize } from '../middleware/auth.js';
 
@@ -13,6 +54,9 @@ const router = express.Router();
 
 // Public routes
 router.get('/available', getAvailableRooms);
+router.get('/cities', getAllCities); // NEW: Get all cities
+router.get('/cities/:city/hotels', getHotelsByCity); // NEW: Get hotels by city
+router.get('/hotels/:hotelName', getRoomsByHotel); // NEW: Get rooms by hotel
 router.get('/', getAllRooms);
 router.get('/:id', getRoom);
 

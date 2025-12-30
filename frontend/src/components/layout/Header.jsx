@@ -33,22 +33,22 @@ const Header = () => {
     {
       icon: "📱",
       label: "Call Now",
-      value: "+1 (234) 567-890",
-      action: () => window.location.href = "tel:+1234567890",
+      value: "+92 3271616777",
+      action: () => window.location.href = "tel:+92 3271616777",
       color: "blue"
     },
     {
       icon: "💬",
       label: "WhatsApp",
       value: "Chat Now",
-      action: () => window.location.href = "https://wa.me/1234567890",
+      action: () => window.location.href = "https://wa.me/+92 3271616777",
       color: "green"
     },
     {
       icon: "✉️",
       label: "Email",
-      value: "sos@hotelhub.com",
-      action: () => window.location.href = "mailto:sos@hotelhub.com",
+      value: "hotelhub@gmail.com",
+      action: () => window.location.href = "hotelhub@gmail.com",
       color: "blue"
     },
   ]
