@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import contactRoutes from './src/routes/contactRoutes.js';
 import rateLimit from 'express-rate-limit';
 import connectDB from './src/config/db.js';
 import authRoutes from './src/routes/authRoutes.js';
@@ -64,6 +65,7 @@ app.use('/api', limiter);
 // Mount routers
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
+app.use('/api/contact', contactRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/admin', adminRoutes);
@@ -92,6 +94,7 @@ app.get('/', (req, res) => {
       health: '/api/health',
       auth: '/api/auth',
       rooms: '/api/rooms',
+      contact: '/api/contact',
       bookings: '/api/bookings',
       payments: '/api/payments',
       admin: '/api/admin',
