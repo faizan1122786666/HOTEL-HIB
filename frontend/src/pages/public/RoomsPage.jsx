@@ -15,7 +15,7 @@
 //   const [filters, setFilters] = useState({
 //     type: "",
 //     maxPrice: 600,
-//     minOccupancy: 1,
+//     guests: 1,
 //   })
 
 //   useEffect(() => {
@@ -136,11 +136,11 @@
 //                 <div>
 //                   <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-3">Min Occupancy</label>
 //                   <select
-//                     value={filters.minOccupancy}
+//                     value={filters.guests}
 //                     onChange={(e) =>
 //                       setFilters({
 //                         ...filters,
-//                         minOccupancy: parseInt(e.target.value),
+//                         guests: parseInt(e.target.value),
 //                       })
 //                     }
 //                     className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition bg-white text-slate-900 text-sm"
@@ -160,7 +160,7 @@
 //                     setFilters({
 //                       type: "",
 //                       maxPrice: 600,
-//                       minOccupancy: 1,
+//                       guests: 1,
 //                     })
 //                   }
 //                 >
@@ -190,7 +190,7 @@
 //                     setFilters({
 //                       type: "",
 //                       maxPrice: 600,
-//                       minOccupancy: 1,
+//                       guests: 1,
 //                     })
 //                   }
 //                 >
@@ -269,7 +269,7 @@ const RoomsPage = () => {
   const [filters, setFilters] = useState({
     type: "",
     maxPrice: 20000,
-    minOccupancy: 1,
+    guests: 1,
   })
 
   useEffect(() => {
@@ -537,11 +537,11 @@ const RoomsPage = () => {
                 <div>
                   <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-3">Min Occupancy</label>
                   <select
-                    value={filters.minOccupancy}
+                    value={filters.guests}
                     onChange={(e) =>
                       setFilters({
                         ...filters,
-                        minOccupancy: parseInt(e.target.value),
+                        guests: parseInt(e.target.value),
                       })
                     }
                     className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition bg-white text-slate-900 text-sm"
@@ -561,7 +561,7 @@ const RoomsPage = () => {
                     setFilters({
                       type: "",
                       maxPrice: 20000,
-                      minOccupancy: 1,
+                      guests: 1,
                     })
                   }
                 >

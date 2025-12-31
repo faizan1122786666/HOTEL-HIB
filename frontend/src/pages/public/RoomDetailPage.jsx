@@ -497,7 +497,7 @@ const RoomDetailPage = () => {
     }
 
     if (bookingDates.guests > room.maxOccupancy) {
-      setError(`Maximum occupancy is ${room.maxOccupancy} guests`)
+      setError(`Number of Guests is ${room.maxOccupancy} guests`)
       return
     }
 
@@ -615,14 +615,14 @@ const RoomDetailPage = () => {
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-200">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className={`text-2xl ${i < Math.round(room.rating) ? 'text-yellow-400' : 'text-slate-300'}`}>
+                    <span key={i} className={`text-2xl ${i < Math.round(room.rating) ? 'text-slate-300' : 'text-yellow-400'}`}>
                       ★
                     </span>
                   ))}
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">{room.rating} out of 5</p>
-                  <p className="text-sm text-slate-600">{room.reviews} guest reviews</p>
+                  <p className="font-semibold text-slate-900">5 out of 5</p>
+                  <p className="text-sm text-slate-600">guest reviews</p>
                 </div>
               </div>
 
