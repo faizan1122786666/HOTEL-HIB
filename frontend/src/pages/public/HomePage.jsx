@@ -54,7 +54,7 @@ const HomePage = () => {
     {
       id: 1,
       name: "Deluxe Suite",
-      price: 25000,
+      price: 20000,
       image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80",
       rating: 4.8,
       description: "Spacious suite with panoramic city views",
@@ -62,7 +62,7 @@ const HomePage = () => {
     {
       id: 2,
       name: "Royal Penthouse",
-      price: 65000,
+      price: 18000,
       image: "https://images.unsplash.com/photo-1570129477492-45422b51d3d4?w=600&q=80",
       rating: 4.9,
       description: "Ultimate luxury with private terrace",
@@ -70,7 +70,7 @@ const HomePage = () => {
     {
       id: 3,
       name: "Ocean View Room",
-      price: 35000,
+      price: 19000,
       image: "https://images.unsplash.com/photo-1578654377249-e3b30dcd1d2f?w=600&q=80",
       rating: 4.7,
       description: "Serene beachfront experience",
@@ -78,7 +78,7 @@ const HomePage = () => {
     {
       id: 4,
       name: "Executive Suite",
-      price: 45000,
+      price: 17000,
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
       rating: 4.8,
       description: "Perfect for business and leisure",
@@ -87,32 +87,32 @@ const HomePage = () => {
 
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      title: "CEO, Tech Company",
+      name: "Muhammad Faraz Khan",
+      title: "Traveller from Narowal",
       text: "Absolutely world-class service. Every detail was perfect. Would recommend to anyone!",
       rating: 5,
       image: "👨‍💼",
     },
     {
-      name: "Priya Sharma",
+      name: "Hamid Ali",
       title: "Travel Blogger",
       text: "The luxury experience was unparalleled. This is what true hospitality means!",
       rating: 5,
-      image: "👩‍🎨",
+      image: "👨‍💼",
     },
     {
-      name: "Ahmed Hassan",
+      name: "Muhammad Faizan",
       title: "Business Traveler",
       text: "Stayed 5 times. Never disappointed. The staff goes beyond expectations!",
       rating: 5,
       image: "👨‍💼",
     },
     {
-      name: "Lisa Anderson",
+      name: "Mohsin Mustafa",
       title: "Honeymoon Couple",
       text: "Made our honeymoon unforgettable. Romantic, luxurious, and stunning!",
       rating: 5,
-      image: "👰",
+      image: "👨‍💼",
     },
   ]
 
@@ -216,7 +216,7 @@ const HomePage = () => {
               items={useMemo(() => rooms.map((room) => ({
                 image: room.image,
                 title: room.name,
-                subtitle: `LKR ${room.price.toLocaleString()}/night`,
+                subtitle: `Rs ${room.price.toLocaleString()}/night`,
                 handle: room.description,
                 location: `★ ${room.rating}`,
                 borderColor: room.id === 1 ? '#3B82F6' : room.id === 2 ? '#8B5CF6' : room.id === 3 ? '#06B6D4' : '#6366F1',

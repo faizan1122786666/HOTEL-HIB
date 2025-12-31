@@ -4,6 +4,29 @@ import Footer from "../../components/layout/Footer"
 import Card from "../../components/common/Card"
 import Button from "../../components/common/Button"
 
+const InstagramIcon = ({ className = "w-14 h-14" }) => (
+  <svg
+    viewBox="0 0 448 512"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="igGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#feda75" />
+        <stop offset="25%" stopColor="#fa7e1e" />
+        <stop offset="50%" stopColor="#d62976" />
+        <stop offset="75%" stopColor="#962fbf" />
+        <stop offset="100%" stopColor="#4f5bd5" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#igGradient)"
+      d="M224,202a53,53,0,1,0,53,53A53,53,0,0,0,224,202Zm124-41a54,54,0,0,0-30-30C293,124,224,124,224,124s-69,0-94,7a54,54,0,0,0-30,30c-7,25-7,94-7,94s0,69,7,94a54,54,0,0,0,30,30c25,7,94,7,94,7s69,0,94-7a54,54,0,0,0,30-30c7-25,7-94,7-94S355,186,348,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm86-148a19,19,0,1,1,19-19A19,19,0,0,1,310,190Z"
+    />
+  </svg>
+)
+
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -52,13 +75,13 @@ const ContactPage = () => {
       link: "https://wa.me/03271616777",
       color: "green",
     },
-    {
-      icon: "🆘",
-      title: "Instagram",
-      value: "Chat with us anytime",
-      link: "https://www.instagram.com/yourusername",
-      color: "red",
-    },
+    // {
+    //   icon: <InstagramIcon className="w-16 h-16 " />,
+    //   title: "Instagram",
+    //   value: "Chat with us anytime",
+    //   link: "https://www.instagram.com/yourusername",
+    //   color: "red",
+    // },
   ]
 
   return (
@@ -88,7 +111,9 @@ const ContactPage = () => {
       {/* Contact Options */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
             {contacts.map((contact, idx) => (
               <a
                 key={idx}
@@ -102,6 +127,8 @@ const ContactPage = () => {
                   'border-blue-200 hover:border-blue-600 bg-blue-50'
                 }`}>
                   <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">{contact.icon}</div>
+
+
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{contact.title}</h3>
                   <p className={`text-lg font-semibold ${
                     contact.color === 'red' ? 'text-red-600' :
@@ -113,6 +140,7 @@ const ContactPage = () => {
             ))}
           </div>
         </div>
+        
       </section>
 
       {/* Main Contact Section */}
